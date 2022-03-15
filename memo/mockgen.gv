@@ -1,0 +1,410 @@
+digraph gocallvis {
+    label="github.com/golang/mock/mockgen";
+    labeljust="l";
+    fontname="Arial";
+    fontsize="14";
+    rankdir="LR";
+    bgcolor="lightgray";
+    style="solid";
+    penwidth="0.5";
+    pad="0.0";
+    nodesep="0.35";
+
+    node [shape="ellipse" style="filled" fillcolor="honeydew" fontname="Verdana" penwidth="1.0" margin="0.05,0.0"];
+    edge [minlen="2"]
+
+    subgraph "cluster_focus" {
+        fontsize="18";
+bgcolor="#e6ecfa";
+label="main";
+labelloc="t";
+labeljust="c";
+        
+        "github.com/golang/mock/mockgen.reflectMode" [ fillcolor="lightblue" label="reflectMode" penwidth="0.5" ]
+        "github.com/golang/mock/mockgen.run" [ fillcolor="lightblue" label="run" penwidth="0.5" ]
+        "github.com/golang/mock/mockgen.writeProgram" [ fillcolor="lightblue" label="writeProgram" penwidth="0.5" ]
+        "github.com/golang/mock/mockgen.runInDir" [ fillcolor="lightblue" label="runInDir" penwidth="0.5" ]
+        "github.com/golang/mock/mockgen.runInDir$1" [ fillcolor="lightblue" label="runInDir$1" style="dotted,filled" ]
+        "github.com/golang/mock/mockgen.iterInterfaces" [ fillcolor="lightblue" label="iterInterfaces" penwidth="0.5" ]
+        "github.com/golang/mock/mockgen.iterInterfaces$1" [ fillcolor="lightblue" label="iterInterfaces$1" style="dotted,filled" ]
+        "github.com/golang/mock/mockgen.importsOfFile" [ fillcolor="lightblue" label="importsOfFile" penwidth="0.5" ]
+        "github.com/golang/mock/mockgen.createPackageMap" [ fillcolor="lightblue" label="createPackageMap" penwidth="0.5" ]
+        "github.com/golang/mock/mockgen.isVariadic" [ fillcolor="lightblue" label="isVariadic" penwidth="0.5" ]
+        "github.com/golang/mock/mockgen.makeArgString" [ label="makeArgString" penwidth="0.5" fillcolor="lightblue" ]
+        "github.com/golang/mock/mockgen.newIdentifierAllocator" [ fillcolor="lightblue" label="newIdentifierAllocator" penwidth="0.5" ]
+        "github.com/golang/mock/mockgen.parsePackageImport" [ fillcolor="lightblue" label="parsePackageImport" penwidth="0.5" ]
+        "github.com/golang/mock/mockgen.sourceMode" [ fillcolor="lightblue" label="sourceMode" penwidth="0.5" ]
+        "github.com/golang/mock/mockgen.printVersion" [ penwidth="0.5" fillcolor="lightblue" label="printVersion" ]
+        "github.com/golang/mock/mockgen.printModuleVersion" [ fillcolor="lightblue" label="printModuleVersion" penwidth="0.5" ]
+        "github.com/golang/mock/mockgen.main" [ penwidth="0.5" fillcolor="lightblue" label="main" ]
+        "github.com/golang/mock/mockgen.usage" [ penwidth="0.5" fillcolor="lightblue" label="usage" ]
+        "github.com/golang/mock/mockgen.packageNameOfDir" [ penwidth="0.5" fillcolor="lightblue" label="packageNameOfDir" ]
+        "github.com/golang/mock/mockgen.sanitize" [ fillcolor="lightblue" label="sanitize" penwidth="0.5" ]
+        "github.com/golang/mock/mockgen.parseMockNames" [ fillcolor="lightblue" label="parseMockNames" penwidth="0.5" ]
+        
+        subgraph "cluster_*github.com/golang/mock/mockgen.fileParser" {
+        style="rounded,filled";
+fillcolor="lightsteelblue";
+label="(*fileParser)";
+tooltip="type: *github.com/golang/mock/mockgen.fileParser";
+penwidth="0.5";
+fontsize="15";
+fontcolor="#222222";
+labelloc="b";
+        
+        "(*github.com/golang/mock/mockgen.fileParser).parsePackage" [ fillcolor="lightblue" label="parsePackage" penwidth="0.5" ]
+        "(*github.com/golang/mock/mockgen.fileParser).parseFunc" [ penwidth="0.5" fillcolor="lightblue" label="parseFunc" ]
+        "(*github.com/golang/mock/mockgen.fileParser).parseArrayLength" [ fillcolor="lightblue" label="parseArrayLength" penwidth="0.5" ]
+        "(*github.com/golang/mock/mockgen.fileParser).errorf" [ penwidth="0.5" fillcolor="lightblue" label="errorf" ]
+        "(*github.com/golang/mock/mockgen.fileParser).parseType" [ label="parseType" penwidth="0.5" fillcolor="lightblue" ]
+        "(*github.com/golang/mock/mockgen.fileParser).parseFieldList" [ fillcolor="lightblue" label="parseFieldList" penwidth="0.5" ]
+        "(*github.com/golang/mock/mockgen.fileParser).addAuxInterfacesFromFile" [ penwidth="0.5" fillcolor="lightblue" label="addAuxInterfacesFromFile" ]
+        "(*github.com/golang/mock/mockgen.fileParser).parseAuxFiles" [ penwidth="0.5" fillcolor="lightblue" label="parseAuxFiles" ]
+        "(*github.com/golang/mock/mockgen.fileParser).parseFile" [ fillcolor="lightblue" label="parseFile" penwidth="0.5" ]
+        "(*github.com/golang/mock/mockgen.fileParser).parseInterface" [ fillcolor="lightblue" label="parseInterface" penwidth="0.5" ]
+        
+    }
+
+        subgraph "cluster_*github.com/golang/mock/mockgen.generator" {
+        labelloc="b";
+style="rounded,filled";
+fillcolor="lightsteelblue";
+label="(*generator)";
+tooltip="type: *github.com/golang/mock/mockgen.generator";
+penwidth="0.5";
+fontsize="15";
+fontcolor="#222222";
+        
+        "(*github.com/golang/mock/mockgen.generator).GenerateMockMethods" [ label="GenerateMockMethods" penwidth="1.5" fillcolor="lightblue" ]
+        "(*github.com/golang/mock/mockgen.generator).p" [ penwidth="0.5" fillcolor="lightblue" label="p" ]
+        "(*github.com/golang/mock/mockgen.generator).GenerateMockMethod" [ penwidth="1.5" fillcolor="lightblue" label="GenerateMockMethod" ]
+        "(*github.com/golang/mock/mockgen.generator).getArgNames" [ fillcolor="lightblue" label="getArgNames" penwidth="0.5" ]
+        "(*github.com/golang/mock/mockgen.generator).getArgTypes" [ fillcolor="lightblue" label="getArgTypes" penwidth="0.5" ]
+        "(*github.com/golang/mock/mockgen.generator).in" [ fillcolor="lightblue" label="in" penwidth="0.5" ]
+        "(*github.com/golang/mock/mockgen.generator).out" [ fillcolor="lightblue" label="out" penwidth="0.5" ]
+        "(*github.com/golang/mock/mockgen.generator).GenerateMockRecorderMethod" [ penwidth="1.5" fillcolor="lightblue" label="GenerateMockRecorderMethod" ]
+        "(*github.com/golang/mock/mockgen.generator).Output" [ fillcolor="lightblue" label="Output" penwidth="1.5" ]
+        "(*github.com/golang/mock/mockgen.generator).Generate" [ fillcolor="lightblue" label="Generate" penwidth="1.5" ]
+        "(*github.com/golang/mock/mockgen.generator).GenerateMockInterface" [ fillcolor="lightblue" label="GenerateMockInterface" penwidth="1.5" ]
+        "(*github.com/golang/mock/mockgen.generator).mockName" [ penwidth="0.5" fillcolor="lightblue" label="mockName" ]
+        
+    }
+
+        subgraph "cluster_github.com/golang/mock/mockgen.duplicateImport" {
+        fontcolor="#222222";
+labelloc="b";
+style="rounded,filled";
+fillcolor="lightsteelblue";
+label="(duplicateImport)";
+tooltip="type: github.com/golang/mock/mockgen.duplicateImport";
+penwidth="0.5";
+fontsize="15";
+        
+        "(github.com/golang/mock/mockgen.duplicateImport).Path" [ fillcolor="lightblue" label="Path" penwidth="1.5" ]
+        "(github.com/golang/mock/mockgen.duplicateImport).Error" [ penwidth="1.5" fillcolor="lightblue" label="Error" ]
+        "(github.com/golang/mock/mockgen.duplicateImport).Parser" [ fillcolor="lightblue" label="Parser" penwidth="1.5" ]
+        
+    }
+
+        subgraph "cluster_github.com/golang/mock/mockgen.identifierAllocator" {
+        tooltip="type: github.com/golang/mock/mockgen.identifierAllocator";
+penwidth="0.5";
+fontsize="15";
+fontcolor="#222222";
+labelloc="b";
+style="rounded,filled";
+fillcolor="lightsteelblue";
+label="(identifierAllocator)";
+        
+        "(github.com/golang/mock/mockgen.identifierAllocator).allocateIdentifier" [ fillcolor="lightblue" label="allocateIdentifier" penwidth="0.5" ]
+        
+    }
+
+        subgraph "cluster_github.com/golang/mock/mockgen.importedPkg" {
+        fillcolor="lightsteelblue";
+label="(importedPkg)";
+tooltip="type: github.com/golang/mock/mockgen.importedPkg";
+penwidth="0.5";
+fontsize="15";
+fontcolor="#222222";
+labelloc="b";
+style="rounded,filled";
+        
+        "(github.com/golang/mock/mockgen.importedPkg).Path" [ fillcolor="lightblue" label="Path" penwidth="1.5" ]
+        "(github.com/golang/mock/mockgen.importedPkg).Parser" [ penwidth="1.5" fillcolor="lightblue" label="Parser" ]
+        
+    }
+
+        subgraph "cluster_github.com/golang/mock/mockgen/model" {
+        fillcolor="lightyellow";
+rank="sink";
+URL="/?f=github.com/golang/mock/mockgen/model";
+style="filled";
+fontsize="16";
+fontname="Tahoma bold";
+label="model";
+tooltip="package: github.com/golang/mock/mockgen/model";
+penwidth="0.8";
+        
+        
+        subgraph "cluster_*github.com/golang/mock/mockgen/model.ArrayType" {
+        penwidth="0.5";
+fontsize="15";
+fontcolor="#222222";
+labelloc="b";
+style="rounded,filled";
+fillcolor="wheat2";
+label="(*ArrayType)";
+tooltip="type: *github.com/golang/mock/mockgen/model.ArrayType";
+        
+        "(*github.com/golang/mock/mockgen/model.ArrayType).String" [ fillcolor="moccasin" label="String" penwidth="1.5" ]
+        
+    }
+
+        subgraph "cluster_*github.com/golang/mock/mockgen/model.ChanType" {
+        style="rounded,filled";
+fillcolor="wheat2";
+label="(*ChanType)";
+tooltip="type: *github.com/golang/mock/mockgen/model.ChanType";
+penwidth="0.5";
+fontsize="15";
+fontcolor="#222222";
+labelloc="b";
+        
+        "(*github.com/golang/mock/mockgen/model.ChanType).String" [ fillcolor="moccasin" label="String" penwidth="1.5" ]
+        
+    }
+
+        subgraph "cluster_*github.com/golang/mock/mockgen/model.FuncType" {
+        fontcolor="#222222";
+labelloc="b";
+style="rounded,filled";
+fillcolor="wheat2";
+label="(*FuncType)";
+tooltip="type: *github.com/golang/mock/mockgen/model.FuncType";
+penwidth="0.5";
+fontsize="15";
+        
+        "(*github.com/golang/mock/mockgen/model.FuncType).String" [ penwidth="1.5" fillcolor="moccasin" label="String" ]
+        
+    }
+
+        subgraph "cluster_*github.com/golang/mock/mockgen/model.Interface" {
+        fillcolor="wheat2";
+label="(*Interface)";
+tooltip="type: *github.com/golang/mock/mockgen/model.Interface";
+penwidth="0.5";
+fontsize="15";
+fontcolor="#222222";
+labelloc="b";
+style="rounded,filled";
+        
+        "(*github.com/golang/mock/mockgen/model.Interface).AddMethod" [ fillcolor="moccasin" label="AddMethod" penwidth="1.5" ]
+        
+    }
+
+        subgraph "cluster_*github.com/golang/mock/mockgen/model.MapType" {
+        fontsize="15";
+fontcolor="#222222";
+labelloc="b";
+style="rounded,filled";
+fillcolor="wheat2";
+label="(*MapType)";
+tooltip="type: *github.com/golang/mock/mockgen/model.MapType";
+penwidth="0.5";
+        
+        "(*github.com/golang/mock/mockgen/model.MapType).String" [ fillcolor="moccasin" label="String" penwidth="1.5" ]
+        
+    }
+
+        subgraph "cluster_*github.com/golang/mock/mockgen/model.NamedType" {
+        tooltip="type: *github.com/golang/mock/mockgen/model.NamedType";
+penwidth="0.5";
+fontsize="15";
+fontcolor="#222222";
+labelloc="b";
+style="rounded,filled";
+fillcolor="wheat2";
+label="(*NamedType)";
+        
+        "(*github.com/golang/mock/mockgen/model.NamedType).String" [ fillcolor="moccasin" label="String" penwidth="1.5" ]
+        
+    }
+
+        subgraph "cluster_*github.com/golang/mock/mockgen/model.Package" {
+        fontsize="15";
+fontcolor="#222222";
+labelloc="b";
+style="rounded,filled";
+fillcolor="wheat2";
+label="(*Package)";
+tooltip="type: *github.com/golang/mock/mockgen/model.Package";
+penwidth="0.5";
+        
+        "(*github.com/golang/mock/mockgen/model.Package).Print" [ fillcolor="moccasin" label="Print" penwidth="1.5" ]
+        "(*github.com/golang/mock/mockgen/model.Package).Imports" [ fillcolor="moccasin" label="Imports" penwidth="1.5" ]
+        
+    }
+
+        subgraph "cluster_*github.com/golang/mock/mockgen/model.PointerType" {
+        style="rounded,filled";
+fillcolor="wheat2";
+label="(*PointerType)";
+tooltip="type: *github.com/golang/mock/mockgen/model.PointerType";
+penwidth="0.5";
+fontsize="15";
+fontcolor="#222222";
+labelloc="b";
+        
+        "(*github.com/golang/mock/mockgen/model.PointerType).String" [ fillcolor="moccasin" label="String" penwidth="1.5" ]
+        
+    }
+
+        subgraph "cluster_github.com/golang/mock/mockgen/model.PredeclaredType" {
+        penwidth="0.5";
+fontsize="15";
+fontcolor="#222222";
+labelloc="b";
+style="rounded,filled";
+fillcolor="wheat2";
+label="(PredeclaredType)";
+tooltip="type: github.com/golang/mock/mockgen/model.PredeclaredType";
+        
+        "(github.com/golang/mock/mockgen/model.PredeclaredType).String" [ fillcolor="moccasin" label="String" penwidth="1.5" ]
+        
+    }
+
+    }
+
+        subgraph "cluster_golang.org/x/mod/modfile" {
+        penwidth="0.8";
+fillcolor="lightyellow";
+fontname="Tahoma bold";
+label="modfile";
+URL="/?f=golang.org/x/mod/modfile";
+fontsize="16";
+style="filled";
+rank="sink";
+tooltip="package: golang.org/x/mod/modfile";
+        
+        "golang.org/x/mod/modfile.ModulePath" [ fillcolor="moccasin" label="ModulePath" penwidth="1.5" ]
+        
+    }
+
+        subgraph "cluster_golang.org/x/tools/imports" {
+        penwidth="0.8";
+fontsize="16";
+rank="sink";
+tooltip="package: golang.org/x/tools/imports";
+style="filled";
+fillcolor="lightyellow";
+fontname="Tahoma bold";
+label="imports";
+URL="/?f=golang.org/x/tools/imports";
+        
+        "golang.org/x/tools/imports.Process" [ fillcolor="moccasin" label="Process" penwidth="1.5" ]
+        
+    }
+
+    }
+
+    "github.com/golang/mock/mockgen.reflectMode" -> "github.com/golang/mock/mockgen.run" [  ]
+    "github.com/golang/mock/mockgen.reflectMode" -> "github.com/golang/mock/mockgen.writeProgram" [  ]
+    "github.com/golang/mock/mockgen.runInDir" -> "github.com/golang/mock/mockgen.runInDir$1" [ arrowhead="normalnoneodiamond" ]
+    "github.com/golang/mock/mockgen.runInDir" -> "github.com/golang/mock/mockgen.run" [  ]
+    "github.com/golang/mock/mockgen.reflectMode" -> "github.com/golang/mock/mockgen.runInDir" [  ]
+    "github.com/golang/mock/mockgen.iterInterfaces" -> "github.com/golang/mock/mockgen.iterInterfaces$1" [ arrowhead="normalnoneodot" ]
+    "(*github.com/golang/mock/mockgen.fileParser).parsePackage" -> "github.com/golang/mock/mockgen.iterInterfaces" [  ]
+    "github.com/golang/mock/mockgen.importsOfFile" -> "github.com/golang/mock/mockgen.createPackageMap" [  ]
+    "(*github.com/golang/mock/mockgen.fileParser).parsePackage" -> "github.com/golang/mock/mockgen.importsOfFile" [  ]
+    "(*github.com/golang/mock/mockgen.fileParser).parseFunc" -> "github.com/golang/mock/mockgen.isVariadic" [  ]
+    "(*github.com/golang/mock/mockgen.fileParser).parseArrayLength" -> "(*github.com/golang/mock/mockgen.fileParser).errorf" [  ]
+    "(*github.com/golang/mock/mockgen.fileParser).parseArrayLength" -> "(*github.com/golang/mock/mockgen.fileParser).parseArrayLength" [  ]
+    "(*github.com/golang/mock/mockgen.fileParser).parseType" -> "(*github.com/golang/mock/mockgen.fileParser).parseArrayLength" [  ]
+    "(*github.com/golang/mock/mockgen.fileParser).parseType" -> "(*github.com/golang/mock/mockgen.fileParser).parseType" [  ]
+    "(*github.com/golang/mock/mockgen.fileParser).parseType" -> "(*github.com/golang/mock/mockgen.fileParser).errorf" [  ]
+    "(*github.com/golang/mock/mockgen.fileParser).parseType" -> "(*github.com/golang/mock/mockgen.fileParser).parseFunc" [  ]
+    "(*github.com/golang/mock/mockgen.fileParser).parseType" -> "(github.com/golang/mock/mockgen.importedPkg).Path" [ style="dashed" ]
+    "(github.com/golang/mock/mockgen.duplicateImport).Path" -> "(github.com/golang/mock/mockgen.duplicateImport).Error" [  ]
+    "(*github.com/golang/mock/mockgen.fileParser).parseType" -> "(github.com/golang/mock/mockgen.duplicateImport).Path" [ style="dashed" ]
+    "(*github.com/golang/mock/mockgen.fileParser).parseFieldList" -> "(*github.com/golang/mock/mockgen.fileParser).parseType" [  ]
+    "(*github.com/golang/mock/mockgen.fileParser).parseFunc" -> "(*github.com/golang/mock/mockgen.fileParser).parseFieldList" [  ]
+    "(*github.com/golang/mock/mockgen.fileParser).parseFunc" -> "(*github.com/golang/mock/mockgen.fileParser).errorf" [  ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockMethods" -> "(*github.com/golang/mock/mockgen.generator).p" [  ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockMethod" -> "(*github.com/golang/mock/mockgen.generator).getArgNames" [  ]
+    "(*github.com/golang/mock/mockgen.generator).getArgTypes" -> "(*github.com/golang/mock/mockgen/model.MapType).String" [ style="dashed" color="saddlebrown" ]
+    "(*github.com/golang/mock/mockgen.generator).getArgTypes" -> "(*github.com/golang/mock/mockgen/model.FuncType).String" [ style="dashed" color="saddlebrown" ]
+    "(*github.com/golang/mock/mockgen.generator).getArgTypes" -> "(github.com/golang/mock/mockgen/model.PredeclaredType).String" [ style="dashed" color="saddlebrown" ]
+    "(*github.com/golang/mock/mockgen.generator).getArgTypes" -> "(*github.com/golang/mock/mockgen/model.ArrayType).String" [ style="dashed" color="saddlebrown" ]
+    "(*github.com/golang/mock/mockgen.generator).getArgTypes" -> "(*github.com/golang/mock/mockgen/model.PointerType).String" [ style="dashed" color="saddlebrown" ]
+    "(*github.com/golang/mock/mockgen.generator).getArgTypes" -> "(*github.com/golang/mock/mockgen/model.NamedType).String" [ style="dashed" color="saddlebrown" ]
+    "(*github.com/golang/mock/mockgen.generator).getArgTypes" -> "(*github.com/golang/mock/mockgen/model.ChanType).String" [ style="dashed" color="saddlebrown" ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockMethod" -> "(*github.com/golang/mock/mockgen.generator).getArgTypes" [  ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockMethod" -> "github.com/golang/mock/mockgen.makeArgString" [  ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockMethod" -> "github.com/golang/mock/mockgen.newIdentifierAllocator" [  ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockMethod" -> "(github.com/golang/mock/mockgen.identifierAllocator).allocateIdentifier" [  ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockMethod" -> "(*github.com/golang/mock/mockgen.generator).p" [  ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockMethod" -> "(*github.com/golang/mock/mockgen.generator).in" [  ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockMethod" -> "(*github.com/golang/mock/mockgen.generator).out" [  ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockMethod" -> "(*github.com/golang/mock/mockgen/model.MapType).String" [ style="dashed" color="saddlebrown" ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockMethod" -> "(*github.com/golang/mock/mockgen/model.FuncType).String" [ style="dashed" color="saddlebrown" ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockMethod" -> "(github.com/golang/mock/mockgen/model.PredeclaredType).String" [ style="dashed" color="saddlebrown" ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockMethod" -> "(*github.com/golang/mock/mockgen/model.ArrayType).String" [ style="dashed" color="saddlebrown" ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockMethod" -> "(*github.com/golang/mock/mockgen/model.PointerType).String" [ style="dashed" color="saddlebrown" ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockMethod" -> "(*github.com/golang/mock/mockgen/model.NamedType).String" [ style="dashed" color="saddlebrown" ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockMethod" -> "(*github.com/golang/mock/mockgen/model.ChanType).String" [ style="dashed" color="saddlebrown" ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockMethods" -> "(*github.com/golang/mock/mockgen.generator).GenerateMockMethod" [  ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockRecorderMethod" -> "(*github.com/golang/mock/mockgen.generator).getArgNames" [  ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockRecorderMethod" -> "github.com/golang/mock/mockgen.newIdentifierAllocator" [  ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockRecorderMethod" -> "(github.com/golang/mock/mockgen.identifierAllocator).allocateIdentifier" [  ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockRecorderMethod" -> "(*github.com/golang/mock/mockgen.generator).p" [  ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockRecorderMethod" -> "(*github.com/golang/mock/mockgen.generator).in" [  ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockRecorderMethod" -> "(*github.com/golang/mock/mockgen.generator).out" [  ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockMethods" -> "(*github.com/golang/mock/mockgen.generator).GenerateMockRecorderMethod" [  ]
+    "(github.com/golang/mock/mockgen.duplicateImport).Parser" -> "(github.com/golang/mock/mockgen.duplicateImport).Error" [  ]
+    "github.com/golang/mock/mockgen.parsePackageImport" -> "golang.org/x/mod/modfile.ModulePath" [ color="saddlebrown" ]
+    "github.com/golang/mock/mockgen.sourceMode" -> "github.com/golang/mock/mockgen.parsePackageImport" [  ]
+    "(*github.com/golang/mock/mockgen.fileParser).addAuxInterfacesFromFile" -> "github.com/golang/mock/mockgen.iterInterfaces" [  ]
+    "(*github.com/golang/mock/mockgen.fileParser).parseAuxFiles" -> "(*github.com/golang/mock/mockgen.fileParser).addAuxInterfacesFromFile" [  ]
+    "github.com/golang/mock/mockgen.sourceMode" -> "(*github.com/golang/mock/mockgen.fileParser).parseAuxFiles" [  ]
+    "github.com/golang/mock/mockgen.sourceMode" -> "(*github.com/golang/mock/mockgen.fileParser).addAuxInterfacesFromFile" [  ]
+    "(*github.com/golang/mock/mockgen.fileParser).parseFile" -> "github.com/golang/mock/mockgen.importsOfFile" [  ]
+    "(*github.com/golang/mock/mockgen.fileParser).parseFile" -> "github.com/golang/mock/mockgen.iterInterfaces" [  ]
+    "(*github.com/golang/mock/mockgen.fileParser).parseInterface" -> "(*github.com/golang/mock/mockgen.fileParser).parseFunc" [  ]
+    "(*github.com/golang/mock/mockgen.fileParser).parseInterface" -> "(*github.com/golang/mock/mockgen/model.Interface).AddMethod" [ color="saddlebrown" ]
+    "(*github.com/golang/mock/mockgen.fileParser).parseInterface" -> "(*github.com/golang/mock/mockgen.fileParser).parseInterface" [  ]
+    "(*github.com/golang/mock/mockgen.fileParser).parseInterface" -> "(*github.com/golang/mock/mockgen.fileParser).parsePackage" [  ]
+    "(*github.com/golang/mock/mockgen.fileParser).parseInterface" -> "(*github.com/golang/mock/mockgen.fileParser).errorf" [  ]
+    "(*github.com/golang/mock/mockgen.fileParser).parseInterface" -> "(github.com/golang/mock/mockgen.importedPkg).Path" [ style="dashed" ]
+    "(*github.com/golang/mock/mockgen.fileParser).parseInterface" -> "(github.com/golang/mock/mockgen.duplicateImport).Path" [ style="dashed" ]
+    "(*github.com/golang/mock/mockgen.fileParser).parseInterface" -> "(github.com/golang/mock/mockgen.importedPkg).Parser" [ style="dashed" ]
+    "(*github.com/golang/mock/mockgen.fileParser).parseInterface" -> "(github.com/golang/mock/mockgen.duplicateImport).Parser" [ style="dashed" ]
+    "(*github.com/golang/mock/mockgen.fileParser).parseFile" -> "(*github.com/golang/mock/mockgen.fileParser).parseInterface" [  ]
+    "github.com/golang/mock/mockgen.sourceMode" -> "(*github.com/golang/mock/mockgen.fileParser).parseFile" [  ]
+    "(*github.com/golang/mock/mockgen.generator).Output" -> "golang.org/x/tools/imports.Process" [ color="saddlebrown" ]
+    "github.com/golang/mock/mockgen.printVersion" -> "github.com/golang/mock/mockgen.printModuleVersion" [  ]
+    "github.com/golang/mock/mockgen.main" -> "github.com/golang/mock/mockgen.printVersion" [  ]
+    "github.com/golang/mock/mockgen.main" -> "github.com/golang/mock/mockgen.sourceMode" [  ]
+    "github.com/golang/mock/mockgen.main" -> "github.com/golang/mock/mockgen.usage" [  ]
+    "github.com/golang/mock/mockgen.main" -> "github.com/golang/mock/mockgen.reflectMode" [  ]
+    "github.com/golang/mock/mockgen.packageNameOfDir" -> "github.com/golang/mock/mockgen.parsePackageImport" [  ]
+    "github.com/golang/mock/mockgen.main" -> "github.com/golang/mock/mockgen.packageNameOfDir" [  ]
+    "github.com/golang/mock/mockgen.main" -> "(*github.com/golang/mock/mockgen/model.Package).Print" [ color="saddlebrown" ]
+    "github.com/golang/mock/mockgen.main" -> "github.com/golang/mock/mockgen.sanitize" [  ]
+    "github.com/golang/mock/mockgen.main" -> "github.com/golang/mock/mockgen.parsePackageImport" [  ]
+    "github.com/golang/mock/mockgen.main" -> "github.com/golang/mock/mockgen.parseMockNames" [  ]
+    "(*github.com/golang/mock/mockgen.generator).Generate" -> "(*github.com/golang/mock/mockgen.generator).p" [  ]
+    "(*github.com/golang/mock/mockgen.generator).Generate" -> "(*github.com/golang/mock/mockgen/model.Package).Imports" [ color="saddlebrown" ]
+    "(*github.com/golang/mock/mockgen.generator).Generate" -> "github.com/golang/mock/mockgen.createPackageMap" [  ]
+    "(*github.com/golang/mock/mockgen.generator).Generate" -> "github.com/golang/mock/mockgen.sanitize" [  ]
+    "(*github.com/golang/mock/mockgen.generator).Generate" -> "(*github.com/golang/mock/mockgen.generator).in" [  ]
+    "(*github.com/golang/mock/mockgen.generator).Generate" -> "(*github.com/golang/mock/mockgen.generator).out" [  ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockInterface" -> "(*github.com/golang/mock/mockgen.generator).mockName" [  ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockInterface" -> "(*github.com/golang/mock/mockgen.generator).p" [  ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockInterface" -> "(*github.com/golang/mock/mockgen.generator).in" [  ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockInterface" -> "(*github.com/golang/mock/mockgen.generator).out" [  ]
+    "(*github.com/golang/mock/mockgen.generator).GenerateMockInterface" -> "(*github.com/golang/mock/mockgen.generator).GenerateMockMethods" [  ]
+    "(*github.com/golang/mock/mockgen.generator).Generate" -> "(*github.com/golang/mock/mockgen.generator).GenerateMockInterface" [  ]
+    "github.com/golang/mock/mockgen.main" -> "(*github.com/golang/mock/mockgen.generator).Generate" [  ]
+    "github.com/golang/mock/mockgen.main" -> "(*github.com/golang/mock/mockgen.generator).Output" [  ]
+}
